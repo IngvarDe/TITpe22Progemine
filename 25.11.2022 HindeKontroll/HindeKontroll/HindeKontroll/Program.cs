@@ -10,10 +10,12 @@ namespace HindeKontroll
             // muudab string andmetyybi int andmetüübiks
             int num = Convert.ToInt32(Console.ReadLine());
 
+            //
             if (num < 0 || num > 100)
             {
                 Console.WriteLine("Vale number");
             }
+            //
             else if (num >= 0 && num < 50)
             {
                 Console.WriteLine("Failer oled ja luuser");
