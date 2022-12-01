@@ -1,49 +1,34 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace ConsoleApp11
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("kasutaja kontroll");
-            Console.WriteLine("Denis Leoke ");
-            Console.WriteLine("Siseta nimi: ");
-            string name = Console.ReadLine();
+            Console.WriteLine("Hello World!");
 
-            Console.WriteLine("Siseta pikkus: ");
-            //küsib suurust mida pead sisestama
-            string distance = Console.ReadLine();
-            int distanceParse = Int16.Parse(distance);
-
-            Console.WriteLine("tere " + name + ", oled " + distance + "aastane");
-
+            float distance;
+            int num = Convert.ToInt32(Console.ReadLine());
             Console.ReadKey();
-            if (distanceParse < 40)
+
+            if (num >= 0 && num > 40)
             {
-                Console.WriteLine("oled veel k]hus ");
+                Console.WriteLine("Teie maja on 0 ja 40 ruutmeetri vahel1");
             }
-            //else if (distanceParse >= 0 && distanceParse <= 40)
-            //{
-            //    Console.WriteLine("Loodan ma teen kõik õigesti");
-            //    distanceParse = 0;
-            //}
-            else if (distanceParse >= 41 && distanceParse <= 90)
+            else if (num >= 41 && num < 90)
             {
-                Console.WriteLine("täna on kõik hästi");
+                Console.WriteLine("Teie maja on 41 ja 90 ruutmeetri vahel2");
             }
-            else if (distanceParse >= 91 && distanceParse <= 130)
+            else if (num >= 91 && num < 130)
             {
-                Console.WriteLine("Loodan ,et ma saan hästi hakkama");
+                Console.WriteLine("Teie maja on 91 ja 130 ruutmeetri vahel3");
             }
-            else if (distanceParse >= 131 && distanceParse <= 200)
+            else if (num >= 131 && num < 176)
             {
-                Console.WriteLine("kõik läheb hästi");
+                Console.WriteLine("Teie maja on 131 ja 176 ruutmeetri vahel4");
             }
-            else
-            {
-                Console.WriteLine("ERROR");
-            }
+
         }
     }
 }
