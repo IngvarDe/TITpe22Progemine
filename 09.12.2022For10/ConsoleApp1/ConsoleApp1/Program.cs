@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int i, j, rows;
+            int i, j, rows, k = 1;
 
             Console.WriteLine("Näita numbri kolmnurka");
 
@@ -17,7 +17,7 @@ namespace ConsoleApp1
             {
                 for (j = 1; j <= i; j++)
                 {
-                    Console.Write("{0}", j);
+                    Console.Write("{0} ", j);
                 }
                 Console.Write("\n");
             }
