@@ -23,7 +23,8 @@ namespace ConsoleApp1
                     break;
 
                 case "teemant":
-
+                    Diamond();
+                    break;
 
                 case "ristkülik":
 
@@ -59,6 +60,44 @@ namespace ConsoleApp1
                     Console.Write(mark);
                 }
                 Console.WriteLine();
+            }
+        }
+
+        private static void Diamond()
+        {
+            double i, j, diamond, count;
+
+            Console.WriteLine("\nSisesta teemanti raadiuse mõõtühik sentimeetrites");
+            diamond = double.Parse(Console.ReadLine());
+
+
+
+            //count = diamond - 1;
+
+            for (i = 0; i <= diamond; i++)
+            {
+                for (j = 1; j <= diamond - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (j = 1; j <= 2 * i - 1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
+            }
+
+            for (i = diamond - 1; i >= 1; i--)
+            {
+                for (j = 1; j <= diamond - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (j = 1; j <= 2 * i - 1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
             }
         }
     }
