@@ -27,10 +27,12 @@ namespace ConsoleApp1
                     break;
 
                 case "ristkülik":
-
+                    Rectangle();
+                    break;
 
                 case "kolmnurk":
-
+                    Triangle();
+                    break;
 
                 default:
                     Console.WriteLine("\nVale. Valikut ei tehtud.");
@@ -72,8 +74,6 @@ namespace ConsoleApp1
 
 
 
-            //count = diamond - 1;
-
             for (i = 0; i <= diamond; i++)
             {
                 for (j = 1; j <= diamond - i; j++)
@@ -98,6 +98,59 @@ namespace ConsoleApp1
                     Console.Write("*");
                 }
                 Console.Write("\n");
+            }
+        }
+
+        private static void Rectangle()
+        {
+            Console.WriteLine("\nSisesta ristk[liku kahe k[lje m[[t]hik sentimeetrites");
+
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+
+
+            for (int row = 1; row <= a; row++)
+            {
+                for (int column = 1; column <= b; column++)
+                {
+                    string mark;
+                    if (row == column || row + column <= +1)
+                    {
+                        mark = "*";
+                    }
+                    else
+                    {
+                        mark = "*";
+                    }
+                    Console.Write(mark);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        private static void Triangle()
+        {
+            Console.WriteLine("\nSisesta v]rdk[lgse kolmnurga k[lje pikkus sentimeetrites");
+
+            double length = double.Parse(Console.ReadLine());
+
+            for (int row = 1; row <= length; row++)
+            {
+                for (int column = 1; column <= length * 2 - 1; column++)
+                {
+                    string mark = "";
+
+                    if (row == length)
+                    {
+                        mark = "*";
+                    }
+                    else if(row + column >= length + 1 && column - length + 1 <= row)
+                    {
+                        mark= "*";
+                    }
+                    Console.Write(mark);
+                }
+                Console.WriteLine();
             }
         }
     }
