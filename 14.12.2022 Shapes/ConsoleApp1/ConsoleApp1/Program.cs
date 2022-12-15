@@ -6,13 +6,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            //Start:
+
             Console.Title = "Kuju valimine ja arvutamine"; //aknale nime panemine
             Console.WriteLine("Vali, mis kujundit soovid arvutada ja kujutada ning kirjuta konsoolile");
 
             Console.WriteLine("\n1. Ruut");
             Console.WriteLine("2. Teemant");
             Console.WriteLine("3. Ristkülik");
-            Console.WriteLine("4. Püramiid");
+            Console.WriteLine("4. Kolnurk");
 
             string shape = Console.ReadLine();
 
@@ -38,6 +40,11 @@ namespace ConsoleApp1
                     Console.WriteLine("\nVale. Valikut ei tehtud.");
                     break;
             }
+            Console.ReadKey();
+            //goto Start;
+
+
+
         }
 
         private static void Quadrilateral()
