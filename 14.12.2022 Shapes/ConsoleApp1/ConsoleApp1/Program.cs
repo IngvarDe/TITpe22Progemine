@@ -14,7 +14,7 @@ namespace ConsoleApp1
             Console.WriteLine("\n1. Ruut");
             Console.WriteLine("2. Teemant");
             Console.WriteLine("3. Ristkülik");
-            Console.WriteLine("4. Kolnurk");
+            Console.WriteLine("4. Kolmnurk");
 
             string shape = Console.ReadLine();
 
