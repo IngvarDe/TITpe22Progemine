@@ -52,6 +52,9 @@ namespace ConsoleApp1
             Console.WriteLine("\nSisesta ruudu ühe külje mõõtühik sentimeetrites: ");
             double quadrilateral = double.Parse(Console.ReadLine());
 
+            Console.WriteLine("Ruudu ümbermõõt: " + 4 * quadrilateral);
+            Console.WriteLine("Ruudu pindala: " + quadrilateral * quadrilateral);
+            //Math.PI;
 
             for (int row = 1; row <= quadrilateral; row++)
             {
@@ -74,7 +77,7 @@ namespace ConsoleApp1
 
         private static void Diamond()
         {
-            double i, j, diamond, count;
+            double i, j, diamond;
 
             Console.WriteLine("\nSisesta teemanti raadiuse mõõtühik sentimeetrites");
             diamond = double.Parse(Console.ReadLine());
@@ -110,7 +113,7 @@ namespace ConsoleApp1
 
         private static void Rectangle()
         {
-            Console.WriteLine("\nSisesta ristk[liku kahe k[lje m[[t]hik sentimeetrites");
+            Console.WriteLine("\nSisesta ristküliku kahe külje mõõtühik sentimeetrites");
 
             double a = double.Parse(Console.ReadLine());
             double b = double.Parse(Console.ReadLine());
