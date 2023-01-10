@@ -15,6 +15,7 @@ namespace ConsoleApp1
             Console.WriteLine("2. Teemant");
             Console.WriteLine("3. Ristkülik");
             Console.WriteLine("4. Kolmnurk");
+            Console.WriteLine("5. Maja");
 
             string shape = Console.ReadLine();
 
@@ -34,6 +35,10 @@ namespace ConsoleApp1
 
                 case "kolmnurk":
                     Triangle();
+                    break;
+
+                case "maja":
+                    House();
                     break;
 
                 default:
@@ -148,7 +153,7 @@ namespace ConsoleApp1
             {
                 for (int column = 1; column <= length * 2 - 1; column++)
                 {
-                    string mark = "";
+                    string mark = " ";
 
                     if (row == length)
                     {
@@ -157,6 +162,49 @@ namespace ConsoleApp1
                     else if(row + column >= length + 1 && column - length + 1 <= row)
                     {
                         mark= "*";
+                    }
+                    Console.Write(mark);
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void House()
+        {
+            int i, j, spc, rows, k;
+
+            Console.WriteLine("\nSisesta maja suurus: ");
+            int quadrilateral = int.Parse(Console.ReadLine());
+
+            //katus
+            spc = quadrilateral + 4 - 1;
+
+            for (i = 1; i <= quadrilateral; i++)
+            {
+                for (k = spc; k >= 1; k--)
+                {
+                    Console.Write(" ");
+                }
+
+                for (j = 1; j <= i; j++)
+                    Console.Write("* ");
+                Console.Write("\n");
+                spc--;
+            }
+
+            //korrus
+            for (int row = 1; row <= quadrilateral; row++)
+            {
+                for (int column = 1; column <= quadrilateral; column++)
+                {
+                    string mark;
+                    if (row == column || row + column <= row + 1)
+                    {
+                        mark = " " + " *";
+                    }
+                    else
+                    {
+                        mark = " " + " *";
                     }
                     Console.Write(mark);
                 }
